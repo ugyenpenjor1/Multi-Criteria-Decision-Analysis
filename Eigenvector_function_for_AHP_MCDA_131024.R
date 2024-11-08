@@ -520,12 +520,12 @@ ggplot2::ggsave(
 
 # Load raster and do some edits
 
-canopy <- terra::rast("C:/Users/upenjor/OneDrive - Fauna & Flora International/Desktop/MCDA Results/MCDA_Conservation/canopy_height_utm_01.tif")
-nat_ind <- terra::rast("C:/Users/upenjor/OneDrive - Fauna & Flora International/Desktop/MCDA Results/MCDA_Conservation/naturalness_index_utm_01.tif")
-dpa <- terra::rast("C:/Users/upenjor/OneDrive - Fauna & Flora International/Desktop/MCDA Results/MCDA_Conservation/distance_to_pa_utm_01.tif")
-corridor <- terra::rast("C:/Users/upenjor/OneDrive - Fauna & Flora International/Desktop/MCDA Results/MCDA_Conservation/corridor_utm_01.tif")
-slope <- terra::rast("C:/Users/upenjor/OneDrive - Fauna & Flora International/Desktop/MCDA Results/MCDA_Conservation/slope_utm_01.tif")
-river <- terra::rast("C:/Users/upenjor/OneDrive - Fauna & Flora International/Desktop/MCDA Results/MCDA_Conservation/river_density_utm_01.tif")
+canopy <- terra::rast("canopy_height_utm_01.tif")
+nat_ind <- terra::rast("naturalness_index_utm_01.tif")
+dpa <- terra::rast("distance_to_pa_utm_01.tif")
+corridor <- terra::rast("corridor_utm_01.tif")
+slope <- terra::rast("slope_utm_01.tif")
+river <- terra::rast("river_density_utm_01.tif")
 
 # Inspect extents
 terra::ext(canopy)
@@ -656,15 +656,15 @@ terra::writeRaster(conservation2, "conservation_suitability_utm_121024.tif")
 
 # PRESSURE
 
-slope <- terra::rast("C:/Users/upenjor/OneDrive - Fauna & Flora International/Desktop/MCDA Results/MCDA_Conservation/slope_utm_01.tif")
+slope <- terra::rast("slope_utm_01.tif")
 
 # Load raster files
-urban <- terra::rast("C:/Users/upenjor/OneDrive - Fauna & Flora International/Desktop/MCDA Results/MCDA_Pressure/distance_to_urban_centres_utm_01.tif")
-fire <- terra::rast("C:/Users/upenjor/OneDrive - Fauna & Flora International/Desktop/MCDA Results/MCDA_Pressure/fire_severity_utm_01.tif")
-pop_den <- terra::rast("C:/Users/upenjor/OneDrive - Fauna & Flora International/Desktop/MCDA Results/MCDA_Pressure/population_density_utm_01.tif")
-pres_ind <- terra::rast("C:/Users/upenjor/OneDrive - Fauna & Flora International/Desktop/MCDA Results/MCDA_Pressure/Pressure_index_01.tif")
-pop_size <- terra::rast("C:/Users/upenjor/OneDrive - Fauna & Flora International/Desktop/MCDA Results/MCDA_Pressure/population_size_utm_01.tif")
-droad <- terra::rast("C:/Users/upenjor/OneDrive - Fauna & Flora International/Desktop/MCDA Results/MCDA_Pressure/Distance_to_road_01_2.tif")
+urban <- terra::rast("distance_to_urban_centres_utm_01.tif")
+fire <- terra::rast("fire_severity_utm_01.tif")
+pop_den <- terra::rast("population_density_utm_01.tif")
+pres_ind <- terra::rast("Pressure_index_01.tif")
+pop_size <- terra::rast("population_size_utm_01.tif")
+droad <- terra::rast("Distance_to_road_01_2.tif")
 
 # Inspect extents
 terra::ext(urban)

@@ -4,7 +4,7 @@ install.packages("webshot")
 webshot::install_phantomjs()  # Install PhantomJS to take screenshots
 
 
-# Load necessary libraries
+# Load libraries
 library(knitr)
 library(kableExtra)
 library(webshot)

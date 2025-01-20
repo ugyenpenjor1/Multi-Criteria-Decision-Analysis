@@ -63,30 +63,30 @@ library(ggplot2)
 library(reshape2)
 
 compute_eigenvector <- function(mat, tol = 1e-6, max_iter = 1000) {
-  # Step 1: Initialise
+  # Initialise
   eigenvector <- rep(1 / nrow(mat), nrow(mat)) # Start with a uniform eigenvector
   iter <- 0
   diff <- tol + 1 # Start with a difference greater than tolerance
   all_eigenvectors <- list() # To store eigenvectors at each iteration
   
-  # Step 2: Iterate until convergence
+  # Iterate until convergence
   while (diff > tol && iter < max_iter) {
     # Square the matrix (use the matrix from previous iteration or the input matrix in the first iteration)
     mat <- mat %*% mat
     
-    # Step 3: Row sums
+    # Row sums
     row_sums <- rowSums(mat)
     
-    # Step 4: Total sum of the row sums
+    # Total sum of the row sums
     total_sum <- sum(row_sums)
     
-    # Step 5: Normalise to get the new eigenvector
+    # Normalise to get the new eigenvector
     new_eigenvector <- row_sums / total_sum
     
     # Store the current eigenvector for plotting
     all_eigenvectors[[iter + 1]] <- new_eigenvector
     
-    # Step 6: Compute the difference between the new and old eigenvectors
+    # Compute the difference between the new and old eigenvectors
     diff <- max(abs(new_eigenvector - eigenvector))
     
     # Update eigenvector
